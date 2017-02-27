@@ -9,6 +9,5 @@
 </table>
 
 ### Future features
-- Favicon
 - Pages projects and gallery
 - Fully responsive
