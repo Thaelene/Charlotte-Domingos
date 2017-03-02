@@ -1,5 +1,10 @@
 @import "_fonts.scss";
 
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
 body{
     background-color: #1A1A1A;
     font-family: "montserrat";
@@ -7,58 +12,135 @@ body{
     font-size: 18px;
 }
 a{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .container{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    height: 100%;
+}
+.background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/charlotte.png);
+    background-position-x: 140%;
+    background-repeat: no-repeat;
+    filter: grayscale(1) opacity(0.1);
+    z-index: -877;
 }
 .homepage{
-    height: 100vh;
+    height: 100%;
 }
 
 //header
 header{
-    margin: 3% 0;
+    padding: 3% 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    a{
+        margin-right: auto;
+    }
 
     img{
-        width: 50px;
+        width: 40px;
         color: #fefefe;
+    }
+
+    nav{
+        li{
+            font-family: "walbaum";
+            display: inline-block;
+            padding-left: 80px;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
     }
 }
 
-//main content
-.homepage-main-content{
-    text-align: center;
+//Presentation
+.homepage_presentation{
+    position: relative;
+    height: 100%;
+}
+.wrapper{
+    position: absolute;
+    top: calc(50% - 120px - 115px);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 240px;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 
+    .email{
+        font-family: "walbaum";
+        font-size: 24px;
+    }
+}
+.homepage_presentation-content{
+    line-height: 36px;
     h1{
-        font-family: "walbaum", serif;
-        font-size: 48px;
-        margin: 3% 0;
-        letter-spacing: 12px;
+        font-size: 36px;
+        line-height: 55px;
     }
-
-    .content{
-        display: flex;
-        flex-direction: column;
-        line-height: 24px;
-    }
-
     p{
-        margin: 3% 0;
+        font-size: 24px;
 
         span{
-            text-decoration: underline;
-
-            &:hover{
-                cursor: pointer;
-                color: rgb(145, 134, 137);
+            position: relative;
+            &:after{
+                content: " ";
+                width: 100%;
+                height: 4px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                background: $red;
+                will-change: animation;
+                animation: fade_in 2s ease-in;
             }
         }
     }
+}
+
+@keyframes fade_in {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.5;}
+    70%  {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+
+.homepage_scroll-icon{
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 30px);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    span{
+        font-family: "walbaum";
+        font-size: 18px;
+    }
+    .scroll-bar{
+        width: 4px;
+        height: 50px;
+        background: $red;
+        will-change: animation;
+        animation: flashing 7s ease-in;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes flashing {
+    0%   {opacity: 0;}
+    30%  {opacity: 0.5};
+    60%  {opacity: 1;}
+    80%  {opacity: 0.5;}
+    100% {opacity: 0;}
 }
