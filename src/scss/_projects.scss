@@ -1,0 +1,29 @@
+.projects{
+    .projects-title{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    h2, h3{
+        font-family: "walbaum";
+        font-size: 36px;
+        text-transform: uppercase;
+        height: 23px;
+        letter-spacing: 2px;
+    }
+    .projects-title-decoration{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 60px;
+        width: 340px;
+        justify-content: flex-start;
+
+        .projects-title-decoration_bar{
+            width: 80px;
+            height: 4px;
+            background: $red;
+            margin-right: auto;
+        }
+    }
+}

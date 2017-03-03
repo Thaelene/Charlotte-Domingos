@@ -1,4 +1,5 @@
 @import "_fonts.scss";
+@import "_projects.scss";
 
 html, body{
     width: 100%;
@@ -59,7 +60,7 @@ header{
             padding-left: 80px;
             text-transform: uppercase;
             font-size: 18px;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
     }
     //Tablet
@@ -81,7 +82,7 @@ header{
 }
 
 //Presentation
-.homepage_presentation{
+.homepage-presentation{
     position: relative;
     height: 100%;
 }
@@ -119,7 +120,7 @@ header{
     }
 }
 
-.homepage_presentation-content{
+.homepage-presentation_content{
     line-height: 36px;
     h1{
         font-size: 36px;
@@ -146,7 +147,7 @@ header{
 }
 //Small devices (smaller than the iphone 6 +)
 @media screen and (max-width: 375px){
-    .homepage_presentation-content{
+    .homepage-presentation_content{
         line-height: 25px;
         h1{
             font-size: 24px;
@@ -158,7 +159,7 @@ header{
 }
 //Very small device ( < iPhone 5)
 @media screen and (max-width: 425px){
-    .homepage_presentation-content{
+    .homepage-presentation_content{
         line-height: 28px;
         h1{
             font-size: 20px;
@@ -175,7 +176,7 @@ header{
     100% {opacity: 1;}
 }
 
-.homepage_scroll-icon{
+.homepage-scroll_icon{
     position: absolute;
     bottom: 10px;
     left: calc(50% - 30px);
