@@ -70,6 +70,14 @@ header{
             }
         }
     }
+    //Very small device ( < iPhone 5)
+    @media screen and (max-width: 425px){
+        nav{
+            li{
+                padding-left: 10px;
+            }
+        }
+    }
 }
 
 //Presentation
@@ -96,13 +104,21 @@ header{
         height: 340px;
     }
 }
-//Small device
+//Small device (smaller than the iphone 6 +)
 @media screen and (max-width: 375px){
     .wrapper{
         height: 300px;
         top: calc(50% - 215px);
     }
 }
+//Very small device ( < iPhone 5)
+@media screen and (max-width: 425px){
+    .wrapper{
+        height: 280px;
+        top: calc(50% - 215px);
+    }
+}
+
 .homepage_presentation-content{
     line-height: 36px;
     h1{
@@ -128,7 +144,7 @@ header{
         }
     }
 }
-//Small devices
+//Small devices (smaller than the iphone 6 +)
 @media screen and (max-width: 375px){
     .homepage_presentation-content{
         line-height: 25px;
@@ -137,6 +153,17 @@ header{
         }
         p{
             font-size: 18px;
+        }
+    }
+}
+//Very small device ( < iPhone 5)
+@media screen and (max-width: 425px){
+    .homepage_presentation-content{
+        line-height: 28px;
+        h1{
+            font-size: 20px;
+            line-height: 36px;
+            padding-bottom: 10px;
         }
     }
 }
