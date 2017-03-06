@@ -123,6 +123,10 @@
     transform: perspective(900px) rotateY(0deg);
 }
 
+.active{
+    transform: rotateY(0deg);
+}
+
 // Video card clicked
 
 .projects-video-content{
@@ -132,12 +136,11 @@
     width: 100%;
 }
 .projects-video-content-description{
-    display: flex;
     flex-flow: row nowrap;
     align-items: center;
     height: 300px;
     width: 100%;
-    display: none;
+    display: flex;
 
     .projects-video-content-description-info{
         flex: 3 0px;
