@@ -70,6 +70,7 @@
         position: relative;
 
         .projects-video-card-description{
+            display: none;
             position: absolute;
             top: calc(50% - 40px);
             left: calc(50% - 150px);
@@ -91,6 +92,11 @@
     img{
         width: 100%;
     }
+}
+
+.incoming-projects{
+    width: 66%;
+    text-align: right;
 }
 
 /******* SET ANIMATION CARDS *******/

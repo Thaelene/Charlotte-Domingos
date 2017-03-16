@@ -43,7 +43,8 @@ cards.element.thumbnail[3].addEventListener('click', function()
         close_card(this, 3)
     } else
     {
-        animation_card(this, 3);
+        this.className += " active";
+        cards.element.description_card[3].style.display = "flex";
     }
 });
 
