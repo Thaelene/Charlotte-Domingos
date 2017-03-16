@@ -12,7 +12,7 @@ cards.element.thumbnail[0].addEventListener('click', function()
         close_card(this, 0)
     } else
     {
-        animation_card(this, 0);
+        animation_card(this, 0)
     }
 });
 cards.element.thumbnail[1].addEventListener('click', function()
@@ -22,7 +22,7 @@ cards.element.thumbnail[1].addEventListener('click', function()
         close_card(this, 1)
     } else
     {
-        animation_card(this, 1);
+        animation_card(this, 1)
     }
 
 });
@@ -33,7 +33,7 @@ cards.element.thumbnail[2].addEventListener('click', function()
         close_card(this, 2)
     } else
     {
-        animation_card(this, 2);
+        animation_card(this, 2)
     }
 });
 cards.element.thumbnail[3].addEventListener('click', function()
@@ -43,8 +43,7 @@ cards.element.thumbnail[3].addEventListener('click', function()
         close_card(this, 3)
     } else
     {
-        this.className += " active";
-        cards.element.description_card[3].style.display = "flex";
+        animation_card(this, 3)
     }
 });
 
