@@ -1,12 +1,13 @@
 .projects{
     margin-bottom: 5%;
+    padding-top: 30px;
 
     // Projects title
     .projects-title{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        margin-bottom: 3%;
+        padding-bottom: 3%;
         height: 20%;
     }
     h2{
