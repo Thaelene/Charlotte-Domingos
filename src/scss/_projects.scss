@@ -60,7 +60,7 @@
     display: inline-block;
     width: 33%;
     cursor: pointer;
-    transform: rotateY(30deg);
+    margin: 0 auto;
 
     &:hover{
         .projects-video-card-img{
@@ -111,36 +111,27 @@
 /******* SET ANIMATION CARDS *******/
 
 //1st row
-.cards-1 .projects-video-card:nth-child(2n+1) .projects-video-card-img{
+.cards-1 .projects-video-card{
     transform: perspective(900px) rotateY(-15deg);
     transform-style:preserve-3d;
     transition: rotateY 0.5s ease;
 }
-.cards-1 .projects-video-card:nth-child(2n+0) .projects-video-card-img{
-    transform: perspective(900px) rotateY(15deg);
-    transform-style:preserve-3d;
-    transition: rotateY 0.5s ease;
-}
+
 
 //Row 2
-.cards-2 .projects-video-card:nth-child(2n+1) .projects-video-card-img{
+
+.cards-2 .projects-video-card{
     transform: perspective(900px) rotateY(15deg);
     transform-style:preserve-3d;
     transition: rotateY 0.5s ease;
 }
-.cards-2 .projects-video-card:nth-child(2n+0) .projects-video-card-img{
-    transform: perspective(900px) rotateY(-15deg);
-    transform-style:preserve-3d;
-    transition: rotateY 0.5s ease;
-}
 
-.cards-1 .projects-video-card .projects-video-card-img:hover, .cards-2 .projects-video-card .projects-video-card-img:hover{
+.cards-1 .projects-video-card:hover, .cards-2 .projects-video-card:hover{
     transform: perspective(900px) rotateY(0deg);
 }
 
-.cards-1 .projects-video-card.active .projects-video-card-img, .cards-2 .projects-video-card.active .projects-video-card-img{
+.cards-1 .projects-video-card.active, .cards-2 .projects-video-card.active{
     transform: perspective(900px) rotateY(0deg);
-    filter: opacity(0.6);
     transform: scale(1.1);
     transition: transform 0.5s ease;
 }
