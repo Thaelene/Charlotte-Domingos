@@ -44,6 +44,11 @@ footer{
     filter: grayscale(1) opacity(0.1);
     z-index: -877;
 }
+@media screen and (min-width: 425px) and (max-width: 768px){
+    .background-image{
+        height: 60%;
+    }
+}
 .homepage{
     height: 100%;
 }
@@ -72,6 +77,14 @@ header{
             text-transform: uppercase;
             font-size: 18px;
             letter-spacing: 2px;
+        }
+    }
+    //Ipad Pro
+    @media screen and (min-width: 768px) and (max-width: 1025px){
+        nav{
+            li{
+                padding-left: 70px;
+            }
         }
     }
     //Tablet
@@ -206,6 +219,18 @@ header{
         will-change: animation;
         animation: flashing 7s ease-in;
         animation-iteration-count: infinite;
+    }
+}
+//Ipad Pro
+@media screen and (min-width: 768px) and (max-width: 1025px){
+    .homepage-scroll_icon{
+        bottom: 50%;
+    }
+}
+//Tablet
+@media screen and (min-width: 425px) and (max-width: 768px){
+    .homepage-scroll_icon{
+        bottom: 40%;
     }
 }
 
