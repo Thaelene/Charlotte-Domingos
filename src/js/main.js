@@ -5,6 +5,8 @@ cards.element.thumbnail = document.querySelectorAll('.projects-video-card');
 cards.element.description = document.querySelector('.projects-video-content');
 cards.element.description_card = document.querySelectorAll('.projects-video-content-description');
 
+// Apparition of the description card
+
 cards.element.thumbnail[0].addEventListener('click', function()
 {
     if (this.classList.contains("active"))
@@ -47,6 +49,7 @@ cards.element.thumbnail[3].addEventListener('click', function()
     }
 });
 
+
 function animation_card(elm, data_attr)
 {
     for (var i = 0; i < cards.element.thumbnail.length; i++)
@@ -63,11 +66,24 @@ function animation_card(elm, data_attr)
     }
 }
 
-
 function close_card(elm, data_attr)
 {
     cards.element.description_card[data_attr].style.display = "none";
     elm.classList.remove("active");
 }
 
-console.log(cards.element.thumbnail.length);
+
+// Scrolling effect on anchor
+smoothScroll.init();
+var link   = document.querySelector('.anchor-link');
+var anchor = document.querySelector('#projects-section');
+
+var options = {
+    speed: 1000,
+    easing: 'easeOutCubic'
+};
+
+link.addEventListener('click', function()
+{
+    smoothScroll.animateScroll( anchor, link, options );
+});

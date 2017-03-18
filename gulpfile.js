@@ -53,7 +53,7 @@ gulp.task('styles', function () {
 gulp.task( 'javascript', function()
 {
     return gulp.src( [
-            './src/js/fastclick.js',
+            './src/js/scrollToAnchor.min.js',
             './src/js/main.js',
         ] )
         .pipe(gulp_plumber({errorHandler: gulp_notify.onError("JS Error: <%= error.message %>")}))
