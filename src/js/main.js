@@ -58,12 +58,10 @@ function animation_card(elm, data_attr)
         {
             cards.element.description_card[i].style.display = "none";
             cards.element.thumbnail[i].classList.remove("active");
-        } else
-        {
-            elm.className += " active";
-            cards.element.description_card[data_attr].style.display = "flex";
         }
     }
+    elm.classList.add("active");
+    cards.element.description_card[data_attr].style.display = "flex";
 }
 
 function close_card(elm, data_attr)
