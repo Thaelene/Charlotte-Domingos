@@ -207,6 +207,10 @@
     }
     .projects-video-content-description-synopsis{
         flex: 6 0px;
+
+        p{
+            line-height: 27px;
+        }
         a{
             display: none;
         }
