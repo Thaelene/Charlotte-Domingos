@@ -31,20 +31,21 @@ footer{
 }
 
 .container{
+    height: 100%;
     width: 90%;
     margin: 0 auto;
 }
 .background-image{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url(../img/charlotte.png);
     background-position-x: 100%;
     background-repeat: no-repeat;
-    filter: grayscale(1) opacity(0.1);
-    z-index: -877;
+    text-align: right;
+
+    img{
+        height: 100vh;
+    }
 }
 @media screen and (min-width: 425px) and (max-width: 768px){
     .background-image{
@@ -72,6 +73,7 @@ header{
     }
 
     nav{
+        z-index: 45;
         li{
             font-family: "walbaum";
             display: inline-block;

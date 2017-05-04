@@ -115,5 +115,5 @@ gulp.task( 'watch', function()
 {
     gulp.watch(config.src + 'scss/**/*.scss', [ 'sass' ] );
     gulp.watch(config.src + 'js/*.js', [ 'javascript' ] );
-    gulp.watch(config.dist + '*.html', ['html']);
+    gulp.watch(config.src + '*.html', ['html']);
 } );
