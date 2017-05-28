@@ -1,4 +1,4 @@
-var gulp         = require( 'gulp' ),
+const gulp         = require( 'gulp' ),
 
     // Utility dependencies
     gulp_rename  = require('gulp-rename'),
@@ -19,7 +19,7 @@ var gulp         = require( 'gulp' ),
     // Images
     gulp_imagmin = require ('gulp-imagemin');
 
-var config = {
+const config = {
     'dist': 'dist/',
     'src' : 'src/',
     'assets': 'dist/assets/'
@@ -72,7 +72,7 @@ gulp.task( 'javascript', function()
 {
     return gulp.src( [
             './src/js/scrollToAnchor.min.js',
-            './src/js/main.js',
+            './src/js/main.js'
         ] )
         .pipe(gulp_plumber({
             errorHandler: gulp_notify.onError("JS Error: <%= error.message %>")
@@ -83,6 +83,20 @@ gulp.task( 'javascript', function()
         .pipe(gulp_sourcemaps.write())
         .pipe( gulp.dest(config.assets + 'js' ) );
 } );
+
+gulp.task( 'masonry', function()
+{
+    return gulp.src( './src/js/masonry.js' )
+        .pipe(gulp_plumber({
+            errorHandler: gulp_notify.onError("JS Error: <%= error.message %>")
+        }))
+        .pipe(gulp_sourcemaps.init())
+        .pipe( gulp_concat( 'masonry.min.js' ) )
+        .pipe( gulp_uglify() )
+        .pipe(gulp_sourcemaps.write())
+        .pipe( gulp.dest(config.assets + 'js' ) );
+} );
+
 
 // Minifies images
 gulp.task('imagemin', function()
