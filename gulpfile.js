@@ -30,7 +30,7 @@ gulp.task( 'default', [ 'watch', 'connect' ], function() {} );
 
 // Scss into css, minifies and rename it "style.min.css"
 gulp.task('sass', function () {
-    return gulp.src(config.src + 'scss/*.scss')
+    return gulp.src(config.src + 'scss/main.scss')
     .pipe(gulp_plumber({
         errorHandler: gulp_notify.onError('SASS Erro  <%= error.message %>')
     }))
@@ -46,24 +46,6 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(config.assets + 'css'))
     .pipe(gulp_connect.reload())
     .pipe(gulp_notify('SASS has been compiled !'))
-});
-
-// Minifies and rename others css such as reset.css etc "library.min.css"
-gulp.task('styles', function () {
-    return gulp.src(config.src + 'styles/*.css')
-    .pipe(gulp_plumber({
-        errorHandler: gulp_notify.onError('STYLES Erro  <%= error.message %>')
-    }))
-    .pipe(gulp_sourcemaps.init())
-    .pipe(gulp_cssnano())
-    .pipe(gulp_sourcemaps.write())
-    .pipe(gulp_autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-    .pipe(gulp_rename('library.min.css'))
-    .pipe(gulp.dest(config.assets + 'css'))
-    .pipe(gulp_connect.reload())
 });
 
 // Concats and uglifies js files

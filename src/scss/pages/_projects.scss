@@ -1,0 +1,88 @@
+.projects{
+
+    .title{
+        margin-bottom: 40px;
+    }
+
+    // SINGLE PROJECT
+    a{
+        display: block;
+        margin-bottom: 70px;
+
+        // PROJECT INFO TOP
+        .project-infos {
+            height: 440px;
+
+            // PROJECT IMG
+            .project-infos_img {
+                height: 440px;
+                overflow: hidden;
+
+                img {
+                    width: 940px;
+                }
+            } 
+            
+            // PROJECT SYNOPSIS
+            .project-infos_synopsis {
+                height: 440px;
+                background-color: $background;
+                will-change: transform;
+                transform: translate(100%, -100%);
+
+                h3{
+                    @include fonts('Open Sans', 26px, 600, auto);
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .project-infos_synopsis_credits{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-bottom: 25px;
+                }
+            }
+
+            // PROJECT PRICE
+            .project-infos_price{
+                margin-top: 25px;
+
+                .project-infos_price_img{
+                    svg{
+                        height: 55px;
+
+                        image{
+                            width: 155px;
+                            height: 55px;
+                        }
+                    }
+                }
+                .project-infos_price_text{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        // PROJECT MORE PHOTOS
+        .project-more{
+            margin-top: 25px;
+
+            .project-more_img{
+                display: inline-block;
+                height: 285px;
+                overflow: hidden;
+
+                img{
+                    width: 460px;
+                }
+            }
+            div:first-of-type{
+                margin-right: 16px;
+            }
+        }
+    }
+    
+}

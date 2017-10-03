@@ -1,0 +1,24 @@
+// COLORS
+$red: #940516;
+$pink_helene_ta: #FF0070;
+$purple: #8D1FF0;
+
+
+$background: #F7F7F7;
+$dark_grey: #4A4A4A;
+$light_grey: #E8E8E8;
+$fontbase: #121212;
+
+// FONTS
+@font-face {
+    font-family: 'Nexa-light';
+    src: url(../fonts/Nexa_Light.otf);
+}
+
+// MIXINS
+@mixin fonts($font_family, $font_size, $font_weight, $line_height){
+    font-family: $font-family;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    line-height: $line_height;
+}

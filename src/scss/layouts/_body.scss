@@ -1,0 +1,24 @@
+body{
+    background-color: $background;
+    color: $fontbase;
+}
+a{
+    text-decoration: none;
+}
+div{
+    box-sizing: border-box;
+}
+p{
+    @include fonts('Open Sans', 18px, 400, 27px);
+}
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+}
+.title{
+    @include fonts('Faustina', 44px, 600, auto);
+}
+.synopsis-infos{
+    border: 1px solid $purple;
+    padding: 25px;
+}
