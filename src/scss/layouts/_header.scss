@@ -30,9 +30,8 @@ header{
                 margin-left: 75px;
 
                 a{
+                    @include fonts('Faustina', 24px, 400, auto);
                     color: $dark_grey;
-                    font-size: 24px;
-                    font-weight: 400;
                 }
             }
         }

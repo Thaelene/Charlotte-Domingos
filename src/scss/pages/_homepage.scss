@@ -60,3 +60,49 @@
         }
     }
 }
+
+// HOMEPAGE ABOUT
+.about{
+    margin-bottom: 50px;
+
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about_picture{
+        position: relative;
+
+        .about_picture_img{
+            width: 325px;
+            img{
+                width: 300px;
+            }
+        }
+        
+        .about_picture_flat-color{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 300px;
+            height: 300px;
+            background-color: $purple;
+            z-index: -1;
+        }
+    }
+
+    .about_text{
+        width: 540px;
+
+        h4{
+            @include fonts('Faustina', 48px, 400, auto);
+            width: 200px;
+            margin-bottom: 35px;
+        }
+
+        .about_text_introduction{
+            margin-bottom: 25px;
+        }
+    }
+}

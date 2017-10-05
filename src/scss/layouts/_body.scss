@@ -17,6 +17,10 @@ p{
 }
 .title{
     @include fonts('Faustina', 44px, 600, auto);
+    margin-bottom: 40px;
+}
+.bold{
+    font-weight: 700;
 }
 .synopsis-infos{
     border: 1px solid $purple;
