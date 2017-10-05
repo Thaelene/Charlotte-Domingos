@@ -21,10 +21,11 @@
             
             // PROJECT SYNOPSIS
             .project-infos_synopsis {
+                display: none;
                 height: 440px;
                 background-color: $background;
                 will-change: transform;
-                transform: translate(100%, -100%);
+                transform: translate(-100%, -100%);
 
                 h3{
                     @include fonts('Open Sans', 26px, 600, auto);
@@ -62,6 +63,15 @@
             }
         }
 
+        // HOVER PROJECT 
+        .project-infos:hover {
+            .project-infos_synopsis {
+                display: block;
+                animation: slidein 1.3s ease-in-out 0.5; 
+                animation-fill-mode: forwards;
+            }
+        }
+
         // PROJECT MORE PHOTOS
         .project-more{
             margin-top: 25px;
@@ -80,5 +90,4 @@
             }
         }
     }
-    
 }
