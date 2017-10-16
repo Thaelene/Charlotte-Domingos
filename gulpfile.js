@@ -53,7 +53,6 @@ gulp.task('sass', function () {
 gulp.task( 'javascript', function()
 {
     return gulp.src( [
-            './src/js/scrollToAnchor.min.js',
             './src/js/main.js'
         ] )
         .pipe(gulp_plumber({
@@ -93,7 +92,7 @@ gulp.task('imagemin', function()
 // Autoreload setup
 gulp.task('connect', function() {
   gulp_connect.server({
-    port : 8888,
+    port : 8080,
     root: 'dist/',
     livereload: true
   });
