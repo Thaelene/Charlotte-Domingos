@@ -25,7 +25,13 @@
                 height: 440px;
                 background-color: $background;
                 will-change: transform;
-                transform: translateY(-100%);
+                transform: translateY(-100%) translateX(110%);
+                padding: 20px;
+
+                @include responsive ($md) {
+                    padding: 25px;
+                    transform: translateY(-100%);
+                }
 
                 h3{
                     @include fonts('Open Sans', 26px, 600, auto);
@@ -35,9 +41,13 @@
 
                 .project-infos_synopsis_credits{
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: space-between;
                     margin-bottom: 25px;
+
+                    @include responsive ($md) {
+                        flex-direction: row;
+                    }
                 }
             }
 
@@ -66,9 +76,12 @@
         // HOVER PROJECT 
         .project-infos:hover {
             .project-infos_synopsis {
-                display: block;
-                animation: fadein 1s ease-in-out 0.5; 
-                animation-fill-mode: backwards;
+                @include responsive ($md) {
+                    display: block;
+                    animation: fadein 1s ease-in-out 0.5;
+                    animation-fill-mode: backwards;
+                }
+                
             }
         }
 
@@ -76,17 +89,29 @@
         .project-more{
             margin-top: 25px;
 
+            @include responsive ($md) {
+                display: flex;
+                justify-content: space-between;
+            }
             .project-more_img{
                 display: inline-block;
                 height: 285px;
                 overflow: hidden;
 
                 img{
-                    width: 460px;
+                    width: 100%;
+
+                    @include responsive ($md){
+                        width: 460px;
+                    }
                 }
             }
             div:first-of-type{
-                margin-right: 16px;
+
+                @include responsive ($md) {
+                    margin-right: 16px;
+                }
+                
             }
         }
     }
