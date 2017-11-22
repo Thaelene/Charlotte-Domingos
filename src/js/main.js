@@ -1,3 +1,4 @@
+import HammerJs from './components/hammer.js'
 var myElement = document.querySelector('.top-content_presentation_img');
 
 // create a simple instance

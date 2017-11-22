@@ -79,17 +79,30 @@
 
     .wrapper{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+
+        @include responsive ($md){
+            flex-direction: row;
+        }
+        
     }
 
     .about_picture{
         position: relative;
 
         .about_picture_img{
-            width: 325px;
+            display: inline-block;
+            width: 250px;
+
+            @include responsive ($xxs){
+                width: 325px;
+            }
             img{
-                width: 300px;
+                width: 250px;
+                @include responsive ($xxs) {
+                    width: 300px;
+                }
             }
         }
         
@@ -97,15 +110,25 @@
             position: absolute;
             top: 25px;
             left: 25px;
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             background-color: $purple;
             z-index: -1;
+
+            @include responsive ($xxs){
+                width: 300px;
+                height: 300px;
+            }
         }
     }
 
     .about_text{
-        width: 540px;
+        margin-top: 45px;
+
+        @include responsive ($md){
+            width: 540px;
+            margin-left: 45px;
+        }
 
         h4{
             @include fonts('Faustina', 48px, 400, auto);
