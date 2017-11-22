@@ -1,11 +1,6 @@
-import HammerJs from './components/hammer.js'
-var myElement = document.querySelector('.top-content_presentation_img');
+import SwipeAction from './components/swipe.js'
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
-var bannerImg = new Hammer(myElement);
-
-// listen to events...
-bannerImg.on("panleft panright", function (ev) {
-    myElement.textContent = ev.type + " gesture detected.";
-});
+document.addEventListener("DOMContentLoaded", function () {
+    console.log('script working')
+    new SwipeAction()
+})

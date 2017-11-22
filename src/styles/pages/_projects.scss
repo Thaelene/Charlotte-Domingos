@@ -21,14 +21,15 @@
             
             // PROJECT SYNOPSIS
             .project-infos_synopsis {
-                display: none;
                 height: 440px;
                 background-color: $background;
                 will-change: transform;
                 transform: translateY(-100%) translateX(110%);
                 padding: 20px;
+                transition: transform 1s ease-in;
 
                 @include responsive ($md) {
+                    display: none;
                     padding: 25px;
                     transform: translateY(-100%);
                 }
@@ -49,6 +50,10 @@
                         flex-direction: row;
                     }
                 }
+            }
+            .project-infos_synopsis.swiped{
+                display: block;
+                transform: translateY(-100%) translateX(0);
             }
 
             // PROJECT PRICE
