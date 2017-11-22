@@ -4,6 +4,7 @@
     a{
         display: block;
         margin-bottom: 70px;
+        margin-top: 15px;
 
         // PROJECT INFO TOP
         .project-infos {
@@ -11,11 +12,20 @@
 
             // PROJECT IMG
             .project-infos_img {
+                position: relative;
                 height: 440px;
                 overflow: hidden;
 
                 img {
-                    width: 940px;
+                    position: absolute;
+                    left: -40%;
+                    height: 440px;
+
+                    @include responsive ($md){
+                        position: initial;
+                        width: 940px;
+                        height: auto;
+                    }
                 }
             } 
             
