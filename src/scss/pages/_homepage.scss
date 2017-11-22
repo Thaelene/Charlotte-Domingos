@@ -20,25 +20,37 @@
             text-align: right;
 
             img{
-                width: 780px;
+                width: 100%;
+
+                @include responsive ($md){
+                    width: 780px;
+                }
             }
         }
 
         // INFOS TOP CONTENT
         .top-content_presentation_infos{
             background-color: $background;
-            padding: 25px;
-            width: 460px;
 
-            position: absolute;
-            top: 185px;
+            padding: 15px 0 0;
+
+            @include responsive ($md) {
+               padding: 25px;
+               width: 460px;
+               position: absolute;
+               top: 185px;
+            } 
 
             h1{
                 margin-bottom: 25px;
             }
 
             p{
-                @include fonts('Open Sans', 22px, 400, 33px);
+                @include fonts('Open Sans', 18px, 400, 27px);
+
+                @include responsive ($md){
+                    @include fonts('Open Sans', 22px, 400, 33px);
+                }
             }
         }
 
