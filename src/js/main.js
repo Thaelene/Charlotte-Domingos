@@ -1,8 +1,17 @@
-import SwipeAction from './components/swipe.js'
+import SwipeAction from './components/swipe.js';
+import RevealAction from './components/scrollReveal.js';
 import MasonryJs from './components/masonry.js';
 
-document.addEventListener("DOMContentLoaded", function () {
-    console.log('script working')
-    new SwipeAction()
-    new MasonryJs()
+const BODY = document.querySelector('body')
+
+document.addEventListener("DOMContentLoaded", () => 
+{
+    if (BODY.classList.contains('homepage'))
+    {
+        new SwipeAction()
+        new RevealAction();
+    } else if (BODY.classList.contains('gallery'))
+    {
+      new MasonryJs()
+    }    
 })
