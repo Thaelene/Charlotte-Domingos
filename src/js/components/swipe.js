@@ -3,8 +3,8 @@ import HammerJs from './hammer.js'
 export default class SwipeAction {
     constructor() {
         this.projects = {}
-        this.projects.thumbnail = document.querySelectorAll('.project-infos_img')
-        this.projects.information = document.querySelectorAll('.project-infos_synopsis')
+        this.projects.$thumbnail = document.querySelectorAll('.project-infos_img')
+        this.projects.$information = document.querySelectorAll('.project-infos_synopsis')
         this.initEvents()
 
     }
@@ -12,14 +12,14 @@ export default class SwipeAction {
     initEvents() {
         let that = this
 
-        this.projects.thumbnail.forEach(function (thumbnail) {
+        this.projects.$thumbnail.forEach( thumbnail => {
             let thumbnailImg = new Hammer(thumbnail)
             thumbnailImg.on('panleft', function (ev) {
                 showInfo(thumbnailImg)
             })
         });
 
-        this.projects.information.forEach(function (information) {
+        this.projects.$information.forEach(function (information) {
             let informationBlock = new HammerJs(information)
             informationBlock.on('panright', function (ev) {
                 hideInfo(informationBlock)

@@ -41,10 +41,10 @@ const config = {
 }
 
 // BUILT
-gulp.task('build', gulp.series(clean, gulp.parallel(fonts, sass, html, js, images), () => { }))
+gulp.task('build', gulp.series(clean, gulp.parallel(fonts, pages, sass, html, js, images), () => { }))
 
 // GULP
-gulp.task('default', gulp.series(clean, gulp.parallel(browsersync, fonts, sass, html, js, images, watch), () => {
+gulp.task('default', gulp.series(clean, gulp.parallel(browsersync, fonts, pages, sass, html, js, images, watch), () => {
 
 }));
 
@@ -58,7 +58,7 @@ function watch() {
     gulp.watch(config.src + 'styles/**/*.scss', gulp.series(sass, gulp_reload));
     gulp.watch(config.src + 'js/**/*.js', gulp.series(js, gulp_reload));
     gulp.watch(config.src + 'views/**.html', gulp.series(html, gulp_reload));
-    // gulp.watch(config.src + 'views/**/**.html', gulp.series(fileinclude, gulp_reload));
+    gulp.watch(config.src + 'views/pages/**.html', gulp.series(pages, gulp_reload));
 };
 
 // BROWSER SYNC & LAUNCH
@@ -131,11 +131,11 @@ function html() {
 //         .pipe(gulp_notify('HTML updated'))
 // }
 
-// function pages() {
-//     return gulp.src(config.src + 'views/pages/**.html')
-//         .pipe(gulp.dest(config.dist + "/pages"))
-//         .pipe(gulp_notify('Pages has been updated'));
-// }
+function pages() {
+    return gulp.src(config.src + 'views/pages/**.html')
+        .pipe(gulp.dest(config.dist + 'pages'))
+        .pipe(gulp_notify('Pages have been updated'));
+}
 
 // All js --> One js --> Uglify
 function js() {

@@ -18,13 +18,12 @@
         width: 33%;
     }
     .grid-item {
-        width: 30%;
+        width: 100%;
         float: left;
         margin-bottom: 4%;
 
-        //Very small device ( < iPhone 5)
-        @media screen and (max-width: 425px){
-        width: 30%;
+        @include responsive ($sm) {
+            width: 30%;
         }
     }
     .grid-item--width2{
