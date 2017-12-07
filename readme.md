@@ -29,6 +29,5 @@ You can follow the evolution of her portfolio **[here](http://domingoscharlotte.
 
 ## Upcoming
 - [ ] Images optimizations
-- [ ] Add trailer
-- [ ] Favicon
+- [ ] Add trailer ?
  

@@ -41,10 +41,10 @@ const config = {
 }
 
 // BUILT
-gulp.task('build', gulp.series(clean, gulp.parallel(fonts, pages, sass, html, js, images), () => { }))
+gulp.task('build', gulp.series(clean, gulp.parallel(favicon, fonts, pages, sass, html, js, images), () => { }))
 
 // GULP
-gulp.task('default', gulp.series(clean, gulp.parallel(browsersync, fonts, pages, sass, html, js, images, watch), () => {
+gulp.task('default', gulp.series(clean, gulp.parallel(browsersync, favicon, fonts, pages, sass, html, js, images, watch), () => {
 
 }));
 
@@ -87,6 +87,12 @@ function clean() {
 function fonts() {
     return gulp.src(config.src + 'fonts/**/**')
         .pipe(gulp.dest(config.assets + 'fonts'))
+}
+
+// move favicon to dist
+function favicon() {
+    return gulp.src(config.src + 'favicon/**')
+        .pipe(gulp.dest(config.dist + 'favicon'))
 }
 
 // minimify images
