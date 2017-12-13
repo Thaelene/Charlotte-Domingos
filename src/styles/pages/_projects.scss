@@ -46,14 +46,14 @@
             // PROJECT SYNOPSIS
             .project-infos_synopsis {
                 height: 440px;
-                background-color: $background;
+                background-color: $white;
                 will-change: transform;
                 transform: translateY(-100%) translateX(110%);
                 padding: 20px;
                 transition: transform 1s ease-in;
 
                 @include responsive ($md) {
-                    display: none;
+                    opacity: 0;
                     padding: 25px;
                     transform: translateY(-100%);
                 }
@@ -106,9 +106,9 @@
         .project-infos:hover {
             .project-infos_synopsis {
                 @include responsive ($md) {
-                    display: block;
-                    animation: fadein 1s ease-in-out 0.5;
+                    animation: fadein 1s ease-in 0.5;
                     animation-fill-mode: backwards;
+                    opacity: 0.8;
                 }
                 
             }

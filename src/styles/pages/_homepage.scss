@@ -1,10 +1,10 @@
 // HOMEPAGE TOP CONTENT
 .top-content{
-    margin: 55px 0;
+    margin: 55px 0 100px;
 
     .top-content_presentation{
         position: relative;
-        height: 500px;
+        height: 450px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -16,24 +16,20 @@
 
             img{
                 width: 100%;
-
-                @include responsive ($md){
-                    width: 780px;
-                }
             }
         }
 
         // INFOS TOP CONTENT
         .top-content_presentation_infos{
-            background-color: $background;
+            background-color: $white;
 
             padding: 15px 0 0;
 
             @include responsive ($md) {
                padding: 25px;
-               width: 460px;
+               width: 320px;
                position: absolute;
-               top: 185px;
+               bottom: 100px;
             } 
 
             h1{
@@ -44,7 +40,7 @@
                 @include fonts('Open Sans', 18px, 400, 27px);
 
                 @include responsive ($md){
-                    @include fonts('Open Sans', 22px, 400, 33px);
+                    @include fonts('Open Sans', 18px, 400, 27px);
                 }
             }
         }
@@ -60,10 +56,33 @@
         }
     }
 
+    // TOP CONTENT SYNOPSIS
     .top-content_synopsis{
-        h2{
-            @include fonts('Faustina', 26px, 400, auto);
-            margin-bottom: 25px;
+        position: relative;
+
+        .top-content_synopsis_content{
+            padding: 25px;
+            background-color: $white;
+            z-index: 1;
+
+            h2{
+                @include fonts('Faustina', 26px, 400, auto);
+                margin-bottom: 25px;
+            }
+            
+            p:first-of-type{
+                margin-bottom: 20px;
+            }
+        }
+
+        .top-content_synopsis_flat-color{
+            position: absolute;
+            width: 900px;
+            height: 360px;
+            top: 25px;
+            left: 25px;
+            background-color: $purple;
+            z-index: -1;
         }
     }
 }
