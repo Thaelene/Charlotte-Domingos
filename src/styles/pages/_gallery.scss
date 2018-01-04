@@ -31,3 +31,36 @@
     }
     
 }
+
+.works{
+    margin-bottom: 45px;
+
+    p{
+        margin-bottom: 5px;
+    }
+}
+.works_link{
+    color: $purple;
+    position: relative;
+
+    &:before{
+        content: "";
+        display: block;
+        width: 0%;
+        height: 30px;
+        position: absolute;
+        background-color: $purple;
+        top: 0;
+        left: 0;
+        transition: all ease-in-out 0.5s;
+        z-index: -2;
+    }
+
+    &:hover{
+        color: $white;
+        
+        &:before{
+            width: 100%;
+        }
+    }
+}

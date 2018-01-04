@@ -85,10 +85,9 @@
         .top-content_synopsis_content{
             padding: 25px;
             margin-right: 25px;
+            text-align: justify;
             background-color: $white;
             z-index: 1;
-
-            
 
             h2{
                 @include fonts('Faustina', 26px, 400, auto);
@@ -167,6 +166,7 @@
         @include responsive ($md){
             width: 540px;
             margin-left: 45px;
+            margin-top: 0;
         }
 
         h4{
