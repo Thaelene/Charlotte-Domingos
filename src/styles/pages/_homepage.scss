@@ -1,182 +1,183 @@
 // HOMEPAGE TOP CONTENT
-.top-content{
-    margin: 55px 0 100px;
+.top-content {
+  margin: 55px 0 100px;
 
-    .top-content_presentation{
-        position: relative;
-        height: 320px;
-        display: flex;
-        flex-direction: column;
-        justify-content: inherit;
-        margin-bottom: 50px;
-        font-size: 0;
+  .top-content_presentation {
+    position: relative;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    margin-bottom: 50px;
+    font-size: 0;
 
-        @include responsive ($xxs){
-            height: 350px;
-        }
-
-        @include responsive ($xs){
-            height: 370px;
-        }
-
-        @include responsive ($sm){
-            height: 450px;
-        }
-
-        @include responsive ($md){
-            justify-content: space-between;
-        }
-
-        // TOP CONTENT IMG
-        .top-content_presentation_img{
-            text-align: right;
-
-            img{
-                width: 100%;
-            }
-        }
-
-        // INFOS TOP CONTENT
-        .top-content_presentation_infos{
-            background-color: $white;
-
-            padding: 15px;
-
-            @include responsive ($md) {
-               padding: 25px;
-               width: 320px;
-               position: absolute;
-               bottom: 100px;
-            } 
-
-            h1{
-                margin-bottom: 25px;
-            }
-
-            p{
-                @include fonts('Open Sans', 16px, 400, 24px);
-
-                @include responsive ($md){
-                    @include fonts('Open Sans', 16px, 400, 24px);
-                }
-            }
-        }
-
-        // LINK TO VIDEO
-        .top-content_presentation_video{
-            margin-top: 45px;
-
-            @include responsive ($md){
-                text-align: right;
-                margin-top: 0;
-            }
-
-            a{
-                @include fonts('Open Sans', 18px, 600, auto);
-                text-decoration: underline;
-            }
-        }
+    @include responsive($xxs) {
+      height: 350px;
     }
 
-    // TOP CONTENT SYNOPSIS
-    .top-content_synopsis{
-        position: relative;
-
-        .top-content_synopsis_content{
-            padding: 25px;
-            margin-right: 25px;
-            text-align: justify;
-            background-color: $white;
-            z-index: 1;
-
-            h2{
-                @include fonts('Faustina', 26px, 400, auto);
-                margin-bottom: 25px;
-            }
-            
-            p:first-of-type{
-                margin-bottom: 20px;
-            }
-        }
-
-        .top-content_synopsis_flat-color{
-            position: absolute;
-            width: calc(100% - 25px);
-            height: 100%;
-            top: 25px;
-            left: 25px;
-            background-color: $purple;
-            z-index: -1;
-        }
+    @include responsive($xs) {
+      height: 370px;
     }
+
+    @include responsive($sm) {
+      height: 450px;
+    }
+
+    @include responsive($md) {
+      justify-content: space-between;
+    }
+
+    // TOP CONTENT IMG
+    .top-content_presentation_img {
+      text-align: right;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    // INFOS TOP CONTENT
+    .top-content_presentation_infos {
+      background-color: $white;
+
+      padding: 15px;
+
+      @include responsive($md) {
+        padding: 25px;
+        width: 420px;
+        position: absolute;
+        bottom: -10px;
+        left: 25px;
+      }
+
+      h1 {
+        margin-bottom: 15px;
+      }
+
+      p {
+        @include fonts('Open Sans', 14px, 400, 24px);
+
+        @include responsive($md) {
+          @include fonts('Open Sans', 14px, 400, 24px);
+        }
+      }
+    }
+    .infos_link {
+      margin-top: 15px;
+      a {
+        @include fonts('Open Sans', 16px, 400, auto);
+        color: $purple;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // TOP CONTENT SYNOPSIS
+  .top-content_synopsis {
+    position: relative;
+
+    .top-content_synopsis_content {
+      padding: 25px;
+      margin-right: 0;
+      text-align: left;
+      background-color: $white;
+      z-index: 1;
+
+      @include responsive($sm) {
+        margin-right: 25px;
+      }
+
+      h2 {
+        @include fonts('Faustina', 26px, 400, auto);
+        margin-bottom: 25px;
+      }
+
+      p:first-of-type {
+        margin-bottom: 20px;
+      }
+    }
+
+    .top-content_synopsis_flat-color {
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 25px;
+      left: 25px;
+      background-color: $purple;
+      z-index: -1;
+
+      @include responsive($sm) {
+        width: calc(100% - 25px);
+      }
+    }
+  }
 }
 
 // HOMEPAGE ABOUT
-.about{
-    margin-bottom: 100px;
+.about {
+  margin-bottom: 100px;
 
-    .wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        @include responsive ($md){
-            flex-direction: row;
+    @include responsive($md) {
+      flex-direction: row;
+    }
+  }
+
+  .about_picture {
+    position: relative;
+
+    .about_picture_img {
+      display: inline-block;
+      width: 250px;
+
+      @include responsive($xxs) {
+        width: 325px;
+      }
+      img {
+        width: 250px;
+        @include responsive($xxs) {
+          width: 300px;
         }
-        
+      }
     }
 
-    .about_picture{
-        position: relative;
+    .about_picture_flat-color {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 250px;
+      height: 250px;
+      background-color: $purple;
+      z-index: -1;
 
-        .about_picture_img{
-            display: inline-block;
-            width: 250px;
+      @include responsive($xxs) {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
 
-            @include responsive ($xxs){
-                width: 325px;
-            }
-            img{
-                width: 250px;
-                @include responsive ($xxs) {
-                    width: 300px;
-                }
-            }
-        }
-        
-        .about_picture_flat-color{
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            width: 250px;
-            height: 250px;
-            background-color: $purple;
-            z-index: -1;
+  .about_text {
+    margin-top: 45px;
 
-            @include responsive ($xxs){
-                width: 300px;
-                height: 300px;
-            }
-        }
+    @include responsive($md) {
+      width: 540px;
+      margin-left: 45px;
+      margin-top: 0;
     }
 
-    .about_text{
-        margin-top: 45px;
-
-        @include responsive ($md){
-            width: 540px;
-            margin-left: 45px;
-            margin-top: 0;
-        }
-
-        h4{
-            @include fonts('Faustina', 48px, 400, auto);
-            width: 200px;
-            margin-bottom: 35px;
-        }
-
-        .about_text_introduction{
-            margin-bottom: 25px;
-        }
+    h4 {
+      @include fonts('Faustina', 48px, 400, auto);
+      width: 200px;
+      margin-bottom: 35px;
     }
+
+    .about_text_introduction {
+      margin-bottom: 25px;
+    }
+  }
 }
