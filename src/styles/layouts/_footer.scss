@@ -1,13 +1,13 @@
-footer{
-    padding: 25px;
-    text-align: center;
-    background-color: $light_grey;
-    
-    p{
-        font-size: 15px;
-        a {
-            font-family: 'Nexa-Light';
-            color: $pink_helene_ta;
-        }
+footer {
+  padding: 25px;
+  text-align: center;
+  background-color: $footer;
+
+  p {
+    font-size: 12px;
+    a {
+      font-family: 'Nexa-Light';
+      color: $pink_helene_ta;
     }
+  }
 }
