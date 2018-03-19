@@ -1,181 +1,217 @@
-.projects{
-    overflow: hidden;
+.projects {
+  overflow: hidden;
 
-    // SINGLE PROJECT
-    a{
+  // SINGLE PROJECT
+  a {
+    display: block;
+    margin-bottom: 70px;
+    margin-top: 15px;
+
+    // PROJECT INFO TOP
+    .project-infos {
+      height: 530px;
+
+      @include responsive($xxs) {
+        height: 500px;
+      }
+
+      // PROJECT IMG
+      .project-infos_img {
+        position: relative;
+        height: 530px;
+        overflow: hidden;
+
+        @include responsive($xxs) {
+          height: 500px;
+        }
+
+        img {
+          position: absolute;
+          left: -70%;
+          height: 530px;
+
+          @include responsive($xxs) {
+            left: -50%;
+            height: 500px;
+          }
+
+          @include responsive($xs) {
+            left: -30%;
+          }
+
+          @include responsive($sm) {
+            width: 100%;
+            left: 0;
+          }
+
+          @include responsive($md) {
+            position: initial;
+            width: 940px;
+            height: auto;
+          }
+        }
+      }
+
+      // PROJECT SYNOPSIS
+      .project-infos_synopsis {
+        height: 530px;
+        background-color: $white;
+        will-change: transform;
+        transform: translateY(-100%) translateX(110%);
+        padding: 20px;
+        transition: transform 1s ease-in;
+
+        @include responsive($xxs) {
+          height: 500px;
+        }
+
+        @include responsive($md) {
+          opacity: 0;
+          padding: 25px;
+          transform: translateY(-100%);
+        }
+
+        h3 {
+          @include fonts('Faustina', 26px, 600, auto);
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        // .project-infos_synopsis_text {
+        //   text-align: justify;
+        // }
+
+        .project-infos_synopsis_credits {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-bottom: 25px;
+
+          @include responsive($md) {
+            flex-direction: row;
+          }
+        }
+
+        .project-infos_synopsis_credits_technical,
+        .project-infos_synopsis_credits_role {
+          p {
+            text-transform: uppercase;
+            font-size: 13px;
+
+            span {
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      .project-infos_synopsis.swiped {
         display: block;
-        margin-bottom: 70px;
-        margin-top: 15px;
+        transform: translateY(-100%) translateX(0);
+      }
 
-        // PROJECT INFO TOP
-        .project-infos {
-            height: 440px;
+      // PROJECT PRICE
+      .project-infos_price {
+        margin-top: 25px;
 
-            // PROJECT IMG
-            .project-infos_img {
-                position: relative;
-                height: 440px;
-                overflow: hidden;
+        .project-infos_price_img {
+          svg {
+            height: 25px;
 
-                img {
-                    position: absolute;
-                    left: -70%;
-                    height: 440px;
-
-                    @include responsive($xxs){
-                        left: -50%;
-                    }
-
-                    @include responsive ($xs){
-                        left: -30%;
-                    }
-                    
-                    @include responsive($sm){
-                        width: 100%;
-                        left: 0;
-                    }
-
-                    @include responsive ($md){
-                        position: initial;
-                        width: 940px;
-                        height: auto;
-                    }
-                }
-            } 
-            
-            // PROJECT SYNOPSIS
-            .project-infos_synopsis {
-                height: 440px;
-                background-color: $white;
-                will-change: transform;
-                transform: translateY(-100%) translateX(110%);
-                padding: 20px;
-                transition: transform 1s ease-in;
-
-                @include responsive ($md) {
-                    opacity: 0;
-                    padding: 25px;
-                    transform: translateY(-100%);
-                }
-
-                h3{
-                    @include fonts('Open Sans', 26px, 600, auto);
-                    text-align: center;
-                    margin-bottom: 20px;
-                }
-
-                .project-infos_synopsis_text{
-                    text-align: justify;
-                }
-
-                .project-infos_synopsis_credits{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    margin-bottom: 25px;
-
-                    @include responsive ($md) {
-                        flex-direction: row;
-                    }
-                }
-            }
-            .project-infos_synopsis.swiped{
-                display: block;
-                transform: translateY(-100%) translateX(0);
+            @include responsive($sm) {
+              height: 55px;
             }
 
-            // PROJECT PRICE
-            .project-infos_price{
-                margin-top: 25px;
+            image {
+              width: 85px;
+              height: 25px;
 
-                .project-infos_price_img{
-                    svg{
-                        height: 55px;
-
-                        image{
-                            width: 155px;
-                            height: 55px;
-                        }
-                    }
-                }
-                .project-infos_price_text{
-                    p{
-                        font-size: 15px;
-                    }
-                }
+              @include responsive($sm) {
+                width: 155px;
+                height: 55px;
+              }
             }
+          }
         }
+        .project-infos_price_text {
+          p {
+            font-size: 12px;
+            line-height: 18px;
 
-        // HOVER PROJECT 
-        .project-infos:hover {
-            .project-infos_synopsis {
-                @include responsive ($md) {
-                    animation: fadein 1s ease-in-out 0.5;
-                    animation-fill-mode: backwards;
-                    opacity: 0.8;
-                }
-                
+            @include responsive($xxs) {
+              font-size: 13px;
             }
+          }
         }
-
-        // PROJECT MORE PHOTOS
-        .project-more{
-            margin-top: 25px;
-
-            @include responsive ($md) {
-                display: flex;
-                justify-content: space-between;
-            }
-            .project-more_img{
-                display: inline-block;
-                height: 285px;
-                overflow: hidden;
-
-                img{
-                    width: 100%;
-
-                    @include responsive ($md){
-                        width: 460px;
-                    }
-                }
-            }
-            div:first-of-type{
-
-                @include responsive ($md) {
-                    margin-right: 16px;
-                }
-                
-            }
-        }
+      }
     }
+
+    // HOVER PROJECT
+    .project-infos:hover {
+      .project-infos_synopsis {
+        @include responsive($md) {
+          animation: fadein 1s ease-in-out 0.2;
+          animation-fill-mode: backwards;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    // PROJECT MORE PHOTOS
+    .project-more {
+      margin-top: 25px;
+
+      @include responsive($md) {
+        display: flex;
+        justify-content: space-between;
+      }
+      .project-more_img {
+        display: inline-block;
+        height: 285px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+
+          @include responsive($md) {
+            width: 460px;
+          }
+        }
+      }
+      div:first-of-type {
+        @include responsive($md) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
 }
 
-.project-top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.project-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .projects-top_bullet-number {
-    position: relative;
-    margin-left: 30px;
-    @include fonts('Faustina', 24px, 600, auto);
-    &:before {
-        content: "";
-        position: absolute;
-        left: -120%;
-        top: 50%;
-        display: block;
-        width: 25px;
-        height: 4px;
-        background-color: $purple;
-    }
+  position: relative;
+  margin-left: 30px;
+  @include fonts('Faustina', 24px, 600, auto);
+  &:before {
+    content: '';
+    position: absolute;
+    left: -120%;
+    top: 50%;
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: $purple;
+  }
 }
 
-.project-top_helpers{
-    @include fonts('Open Sans', 14px, 600, auto);
-    @include responsive ($sm){
-        display: none;
-    }
+.project-top_helpers {
+  @include fonts('Open Sans', 14px, 600, auto);
+  @include responsive($sm) {
+    display: none;
+  }
 }
