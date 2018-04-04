@@ -1,115 +1,132 @@
-// HOMEPAGE TOP CONTENT
-.top-content {
-  margin: 55px 0 100px;
+// HERO
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
 
-  .top-content_presentation {
-    position: relative;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: inherit;
-    margin-bottom: 50px;
-    font-size: 0;
+  @include responsive($sm) {
+    height: 438px;
+  }
 
-    @include responsive($xxs) {
-      height: 350px;
-    }
+  @include responsive($md) {
+    height: 600px;
+  }
 
-    @include responsive($xs) {
-      height: 370px;
-    }
+  @include responsive($xl) {
+    height: 750px;
+  }
+
+  .container {
+    height: 100%;
+  }
+}
+
+.hero_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+
+  img {
+    height: 400px;
+    transform: translateX(-30%);
 
     @include responsive($sm) {
-      height: 450px;
+      height: 438px;
     }
 
     @include responsive($md) {
-      justify-content: space-between;
+      width: 100%;
+      height: 600px;
+      transform: inherit;
     }
 
-    // TOP CONTENT IMG
-    .top-content_presentation_img {
-      text-align: right;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    // INFOS TOP CONTENT
-    .top-content_presentation_infos {
-      background-color: $white;
-
-      padding: 15px;
-
-      @include responsive($md) {
-        padding: 25px;
-        width: 420px;
-        position: absolute;
-        bottom: -10px;
-        left: 25px;
-      }
-
-      h1 {
-        margin-bottom: 15px;
-      }
-
-      p {
-        @include fonts('Open Sans', 14px, 400, 24px);
-
-        @include responsive($md) {
-          @include fonts('Open Sans', 14px, 400, 24px);
-        }
-      }
-    }
-    .infos_link {
-      margin-top: 15px;
-      a {
-        @include fonts('Open Sans', 16px, 400, auto);
-        color: $purple;
-        font-weight: 700;
-      }
+    @include responsive($xl) {
+      height: 750px;
     }
   }
+}
 
-  // TOP CONTENT SYNOPSIS
-  .top-content_synopsis {
-    position: relative;
+// HERO PRESENTATION
+.hero_presentation {
+  background-color: $white;
+  padding: 15px;
+  position: absolute;
+  bottom: -30%;
+  width: 280px;
 
-    .top-content_synopsis_content {
-      padding: 25px;
-      margin-right: 0;
-      text-align: left;
-      background-color: $white;
-      z-index: 1;
+  @include responsive($xxs) {
+    bottom: -20%;
+  }
 
-      @include responsive($sm) {
-        margin-right: 25px;
-      }
+  @include responsive($sm) {
+    padding: 25px;
+    width: 420px;
+  }
 
-      h2 {
-        @include fonts('Faustina', 26px, 400, auto);
-        margin-bottom: 25px;
-      }
+  @include responsive($md) {
+    bottom: -10%;
+  }
 
-      p:first-of-type {
-        margin-bottom: 20px;
-      }
+  h1 {
+    margin-bottom: 15px;
+  }
+  p {
+    @include fonts('Open Sans', 14px, 400, 24px);
+    @include responsive($md) {
+      @include fonts('Open Sans', 14px, 400, 24px);
     }
+  }
+}
 
-    .top-content_synopsis_flat-color {
-      position: absolute;
-      width: 0;
-      height: 100%;
-      top: 25px;
-      left: 25px;
-      background-color: $purple;
-      z-index: -1;
+.infos_link {
+  margin-top: 15px;
+  a {
+    @include fonts('Open Sans', 16px, 400, auto);
+    color: $purple;
+    font-weight: 700;
+  }
+}
 
-      @include responsive($sm) {
-        width: calc(100% - 25px);
-      }
-    }
+// TOP CONTENT SYNOPSIS
+.synopsis {
+  margin: 130px 0;
+}
+
+.synopsis_wrapper {
+  position: relative;
+}
+
+.synopsis_content {
+  padding: 25px;
+  margin-right: 0;
+  text-align: left;
+  background-color: $white;
+  z-index: 1;
+  @include responsive($sm) {
+    margin-right: 25px;
+  }
+  h2 {
+    @include fonts('Faustina', 26px, 400, auto);
+    margin-bottom: 25px;
+  }
+  p:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.synopsis_flat-color {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 25px;
+  left: 25px;
+  background-color: $purple;
+  z-index: -1;
+  @include responsive($sm) {
+    width: calc(100% - 25px);
   }
 }
 

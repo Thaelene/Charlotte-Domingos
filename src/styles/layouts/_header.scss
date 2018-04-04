@@ -1,43 +1,42 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 35px 0;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0;
 
-    > a{
-        svg{
+  > a {
+    svg {
+      width: 40px;
+      height: 60px;
+      @include responsive($md) {
+        width: 60px;
+      }
 
-            width: 40px;
-            height: 60px;
-            @include responsive ($md){
-                width: 60px;
-            }
+      .form-1 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
 
-            .form-1 {
-                fill: none;
-                stroke: #1d1d1b;
-                stroke-miterlimit: 10;
-                stroke-width: 6px;
-            }
-
-            .form-2 {
-                fill: #1d1d1b;
-            }
-        }
+      .form-2 {
+        fill: #1d1d1b;
+      }
     }
-    nav{
+  }
+  nav {
+    display: inline-block;
+
+    ul {
+      li {
         display: inline-block;
+        margin-left: 75px;
 
-        ul{
-            li{
-                display: inline-block;
-                margin-left: 75px;
-
-                a{
-                    @include fonts('Faustina', 24px, 400, auto);
-                    color: $dark_grey;
-                }
-            }
+        a {
+          @include fonts('Faustina', 24px, 400, auto);
+          color: $dark_grey;
         }
+      }
     }
+  }
 }
