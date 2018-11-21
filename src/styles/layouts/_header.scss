@@ -40,3 +40,13 @@ header {
     }
   }
 }
+
+.homepage header{
+  nav ul li a{
+    color: $white;
+
+    &:hover{
+      color: $purple;
+    }
+  }
+}
