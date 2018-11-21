@@ -149,7 +149,7 @@
     .project-infos:hover {
       .project-infos_synopsis {
         @include responsive($md) {
-          animation: fadein 1s ease-in-out 0.2;
+          animation: fadein 1s ease 0.2;
           animation-fill-mode: backwards;
           opacity: 1;
           background: $purple;
