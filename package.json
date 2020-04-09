@@ -34,7 +34,7 @@
   "author": "Hélène Ta",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "node-notifier": "^5.2.1",
     "scrollreveal": "^3.4.0"
   }
